@@ -6,6 +6,7 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.bookkeeper/bookkeeper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.apache.bookkeeper/bookkeeper)
 XXX
 XXX
+XXX
 
 # Apache BookKeeper
 
