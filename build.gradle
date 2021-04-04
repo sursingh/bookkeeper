@@ -32,6 +32,10 @@ subprojects {
     task allDeps(type: DependencyReportTask) {}
 }
 
+nebulaRelease {
+    releaseBranchPatterns = [/master/, /branch-(\d+)\.(\d+)/, 'gradle-release']
+}
+
 apply from: "$rootDir/version.gradle"
 
 allprojects {
