@@ -4,6 +4,8 @@
 [![Build Status](https://builds.apache.org/buildStatus/icon?job=bookkeeper-master)](https://builds.apache.org/job/bookkeeper-master/)
 [![Coverage Status](https://coveralls.io/repos/github/apache/bookkeeper/badge.svg?branch=master)](https://coveralls.io/github/apache/bookkeeper?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.bookkeeper/bookkeeper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.apache.bookkeeper/bookkeeper)
+XXX
+XXX
 
 # Apache BookKeeper
 
