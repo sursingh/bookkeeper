@@ -102,6 +102,20 @@ allprojects {
                 sign publishing.publications.maven
             }
         }
+        test {
+            String testGroup = System.properties['testGroup']
+            if (testGroup == 'client') {
+                include '**/client/*'
+            } else if (testGroup == 'bookie') {
+                include '**/bookie/*'
+            } else if (testGroup == 'other') {
+                exclude '**/client/*'
+                exclude '**/bookie/*'
+            }
+            if (project.hasProperty('excludeTests')) {
+                exclude project.property('excludeTests')
+            }
+        }
     }
 
     repositories {
