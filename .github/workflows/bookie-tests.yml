@@ -68,8 +68,14 @@ jobs:
       - name: Run InterleavedLedgerStorageTest
         run: ./gradlew  -PskipSigning=true  :bookkeeper-server:test --tests=TestInterleavedLedgerStorage
 
-      - name: Run bookie tests
-        run: ./gradlew  -PskipSigning=true  :bookkeeper-server:test --tests="org.apache.bookkeeper.bookie.*Test"
+      - name: Run bookie tests 1
+        run: ./gradlew  -i -PskipSigning=true  :bookkeeper-server:test --tests="org.apache.bookkeeper.bookie.EnableZkSecurityBasicTest"
+
+      - name: Run bookie tests 2
+        run: ./gradlew  -i -PskipSigning=true  :bookkeeper-server:test --tests="org.apache.bookkeeper.bookie.BookieInitializationTest.testBookieStartException"
+
+#      - name: Run bookie tests
+#        run: ./gradlew  -PskipSigning=true  :bookkeeper-server:test --tests="org.apache.bookkeeper.bookie.*Test"
 
       - name: save logs
         uses: actions/upload-artifact@v2
