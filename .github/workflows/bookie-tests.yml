@@ -71,6 +71,12 @@ jobs:
       - name: Run bookie tests
         run: ./gradlew  -PskipSigning=true  :bookkeeper-server:test --tests="org.apache.bookkeeper.bookie.*Test"
 
+      - name: save logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: bookie-test-logs
+          path: /home/runner/work/bookkeeper/bookkeeper/bookkeeper-server/build/reports/tests/
+
       - name: Cleanup Gradle Cache
         run: |
           rm -f ~/.gradle/caches/modules-2/modules-2.lock
