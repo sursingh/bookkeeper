@@ -50,13 +50,13 @@ jobs:
           java-version: 1.8
 
       - name: gradle build bookkeeper-server
-        run: gradlew  :bookkeeper-server:clean :bookkeeper-server:publishToMavenLocal
+        run: ./gradlew  :bookkeeper-server:clean :bookkeeper-server:publishToMavenLocal
 
       - name: Run EntryLogTests
-        run: gradlew  :bookkeeper-server:test --tests=TestEntryLog
+        run: ./gradlew  :bookkeeper-server:test --tests=TestEntryLog
 
       - name: Run InterleavedLedgerStorageTest
-        run: gradlew  :bookkeeper-server:test --tests=TestInterleavedLedgerStorage
+        run: ./gradlew  :bookkeeper-server:test --tests=TestInterleavedLedgerStorage
 
       - name: Run bookie tests
-        run: gradlew  :bookkeeper-server:test --tests="org.apache.bookkeeper.bookie.*Test"
+        run: ./gradlew  :bookkeeper-server:test --tests="org.apache.bookkeeper.bookie.*Test"
